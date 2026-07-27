@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block breadcrumb %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm mt-5">
+            <div class="card-body">
+                <h3 class="text-center mb-4">Select User Login</h3>
+                <form method="POST" action="{{ url_for('auth.login') }}">
+                    <div class="mb-4">
+                        <label class="form-label">User Profile</label>
+                        <select name="user_id" class="form-select" style="padding: 10px; font-size: 16px; width: 100%; border: 1px solid #ccc; border-radius: 4px;" required>
+                            <option value="">-- Select a User --</option>
+                            <option value="user-101">user-101</option>
+                            <option value="user-102">user-102</option>
+                            <option value="user-103">user-103</option>
+                            <option value="user-104">user-104</option>
+                            <option value="user-105">user-105</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" style="padding: 12px; font-size: 16px;">Login to Store</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
